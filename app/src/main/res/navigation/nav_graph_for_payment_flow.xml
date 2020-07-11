@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_for_payment_flow"
+    app:startDestination="@id/mainFragment">
+
+<!--    app:startDestination="@id/mainFragment" specifies home fragment-->
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.jetpacknavigation.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_viewTransactionsFragment"
+            app:destination="@id/viewTransactionsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_chooseRecepientFragment"
+            app:destination="@id/chooseRecepientFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_viewBalanceFragment"
+            app:destination="@id/viewBalanceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewBalanceFragment"
+        android:name="com.example.jetpacknavigation.ViewBalanceFragment"
+        android:label="fragment_view_balance"
+        tools:layout="@layout/fragment_view_balance" />
+
+    <fragment
+        android:id="@+id/chooseRecepientFragment"
+        android:name="com.example.jetpacknavigation.ChooseRecepientFragment"
+        android:label="fragment_choose_recepient"
+        tools:layout="@layout/fragment_choose_recepient" >
+        <action
+            android:id="@+id/action_chooseRecepientFragment_to_specifyAmountFragment"
+            app:destination="@id/specifyAmountFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/specifyAmountFragment"
+        android:name="com.example.jetpacknavigation.SpecifyAmountFragment"
+        android:label="fragment_specify_amount"
+        tools:layout="@layout/fragment_specify_amount" >
+        <action
+            android:id="@+id/action_specifyAmountFragment_to_transactionConfirmationFragment"
+            app:destination="@id/transactionConfirmationFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="false"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewTransactionsFragment"
+        android:name="com.example.jetpacknavigation.ViewTransactionsFragment"
+        android:label="fragment_view_transactions"
+        tools:layout="@layout/fragment_view_transactions" />
+
+    <fragment
+        android:id="@+id/transactionConfirmationFragment"
+        android:name="com.example.jetpacknavigation.TransactionConfirmationFragment"
+        android:label="fragment_transaction_confirmation"
+        tools:layout="@layout/fragment_transaction_confirmation" />
+
+</navigation>
