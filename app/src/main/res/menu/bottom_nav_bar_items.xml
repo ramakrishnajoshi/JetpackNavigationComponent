@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
@@ -17,12 +18,12 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="" />
         <item
-            android:id="@+id/nav_gallery2"
-            android:icon="@drawable/ic_menu_gallery"
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_profile"
             android:title="" />
         <item
-            android:id="@+id/nav_slideshow2"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_settings"
             android:title="" />
     </group>
 </menu>
